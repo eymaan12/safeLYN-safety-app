@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background (white at bottom) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+
+    <!-- Top merged curved gradient -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="@color/dark_purple"
+                android:centerColor="#7E57C2"
+                android:endColor="@color/white"
+                android:angle="270" />
+            <corners android:bottomLeftRadius="160dp"
+                android:bottomRightRadius="160dp" />
+        </shape>
+    </item>
+
+</layer-list>

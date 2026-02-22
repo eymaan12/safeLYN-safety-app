@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Safety Report"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etReportTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title (e.g., Broken Streetlight)"
+        android:background="@android:drawable/edit_text"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/etReportDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:background="@android:drawable/edit_text"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerRisk"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnSubmitReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFFFFF"
+        android:text="Submit Report"/>
+
+</LinearLayout>

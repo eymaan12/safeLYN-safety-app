@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "870727432342",
+    "project_id": "safelyn-d461b",
+    "storage_bucket": "safelyn-d461b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870727432342:android:7232afad57a195123d2ab7",
+        "android_client_info": {
+          "package_name": "com.example.registrationpage"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_3nqY7PMHHFW3ggG0dlF8t4OfybotnLI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="@drawable/round_white"
+    android:elevation="8dp">
+
+    <!-- Search Icon -->
+    <ImageView
+        android:id="@+id/searchIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_search"
+        app:tint="#4F535D" />
+
+    <!-- Space -->
+    <Space
+        android:layout_width="8dp"
+        android:layout_height="1dp"/>
+
+    <!-- Input Field -->
+    <EditText
+        android:id="@+id/searchInput"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:hint="Where are you going?"
+        android:padding="0dp"
+        android:singleLine="true"
+        android:textColor="#1F2937"
+        android:textColorHint="#6B7280"
+        android:textSize="22sp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</LinearLayout>

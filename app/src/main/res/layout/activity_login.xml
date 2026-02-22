@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/bg_white_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_security"
+            app:tint="#D81B60"
+            android:background="@drawable/circle_white_alpha"
+            android:padding="16dp"
+            android:layout_marginTop="40dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Safety, Connected"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_tab_container"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:id="@+id/tabSignup"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Sign Up"
+                android:gravity="center"
+                android:textColor="#D81B60"
+                android:textStyle="bold"
+                android:background="@android:color/transparent"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Login"
+                android:gravity="center"
+                android:textColor="#D81B60"
+                android:textStyle="bold"
+                android:background="@drawable/bg_tab_selected"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_input_field"
+            android:padding="24dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email or Phone Number"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter your email"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/bg_input_field"
+                android:paddingHorizontal="16dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter your password"
+                android:inputType="textPassword"
+                android:background="@drawable/bg_input_field"
+                android:paddingHorizontal="16dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="24dp"/>
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:background="@drawable/bg_btn_primary"
+                app:backgroundTint="@null"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvForgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:textColor="#D81B60"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login as Guardian"
+            android:textColor="#D81B60"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp">
+
+            <View android:layout_width="60dp" android:layout_height="1dp" android:background="#CCC"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  Or continue with  "
+                android:textColor="#999"/>
+            <View android:layout_width="60dp" android:layout_height="1dp" android:background="#CCC"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btnGoogle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_google"
+                android:background="@drawable/bg_input_field"
+                android:padding="12dp"
+                android:layout_marginEnd="16dp"/>
+            <ImageView
+                android:id="@+id/btnApple"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_facebook"
+                android:background="@drawable/bg_input_field"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skip for now"
+            android:textColor="#999"
+            android:layout_marginTop="24dp"/>
+
+    </LinearLayout>
+</ScrollView>

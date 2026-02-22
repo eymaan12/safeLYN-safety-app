@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_waves"
+    tools:context=".SplashScreenActivity">
+
+    <View
+        android:id="@+id/glowRing"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_glow_ring"
+        android:translationY="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/logoContainer"
+        app:layout_constraintEnd_toEndOf="@+id/logoContainer"
+        app:layout_constraintStart_toStartOf="@+id/logoContainer"
+        app:layout_constraintTop_toTopOf="@+id/logoContainer" />
+
+    <FrameLayout
+        android:id="@+id/logoContainer"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:background="@drawable/bg_logo_elevated"
+        android:elevation="20dp"
+        android:outlineProvider="background"
+        android:padding="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4">
+
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_security"
+            app:tint="#FFFFFF" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Safelyn"
+        android:textColor="#333333"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoContainer" />
+
+    <TextView
+        android:id="@+id/safetyLineTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:alpha="0.7"
+        android:text="Your Journey, Secured"
+        android:textColor="#D81B60"
+        android:textSize="16sp"
+        android:letterSpacing="0.05"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAppName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

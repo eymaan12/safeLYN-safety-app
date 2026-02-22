@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapSafeRouteActivity">
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="top"
+        android:background="#20FFFFFF"> <include
+        android:id="@+id/searchBar"
+        layout="@layout/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+        <Space android:layout_width="match_parent" android:layout_height="22dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            android:elevation="6dp"
+            android:gravity="center"
+            android:background="@drawable/round_white">
+
+            <RadioGroup
+                android:id="@+id/routeGroup"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="2">
+
+                <RadioButton
+                    android:id="@+id/shortestPath"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="Shortest Path"
+                    android:textColor="#64748B" />
+
+                <RadioButton
+                    android:id="@+id/safestPath"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="Safest Path (8.5)"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:elevation="8dp"
+            android:background="@drawable/card_bg">
+
+            <TextView
+                android:id="@+id/aiScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AI Safety Score: 8.5/10"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/pathDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25 min (3.2 km) - Well-lit Path"
+                android:layout_marginTop="4dp"
+                android:textColor="#475569" />
+
+            <TextView
+                android:id="@+id/warningText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="⚠️ Community Warning: 2 recent reports"
+                android:textColor="#FFB300" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/startNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Start Navigation"
+            android:backgroundTint="#1f89e5"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="12dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/zoomIn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_input_add"
+            android:background="@drawable/round_white"
+            android:elevation="6dp" />
+
+        <ImageButton
+            android:id="@+id/zoomOut"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_delete"
+            android:background="@drawable/round_white"
+            android:elevation="6dp"
+            android:layout_marginTop="8dp" />
+
+        <ImageButton
+            android:id="@+id/myLocation"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_mylocation"
+            android:background="@drawable/round_white"
+            android:elevation="6dp"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+</FrameLayout>

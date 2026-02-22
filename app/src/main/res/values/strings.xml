@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SafeLYN</string>
+    <string name="left_arc_desc">left arc</string>
+    <string name="right_arc_desc">right arc</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="or_divider">  OR  </string>
+    <string name="continue_with_google">  Continue with Google</string>
+    <string name="continue_with_facebook">  Continue with Facebook</string>
+    <string name="google_icon_desc">Google icon</string>
+    <string name="facebook_icon_desc">Facebook icon</string>
+    <string name="lock_icon_desc">Lock Icon</string>
+    <string name="forgot_password_heading">Forget Password</string>
+    <string name="new_password_hint">New Password</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="enter_button_text">Enter</string>
+    <string name="create_account_title">Create Account</string>
+    <string name="full_name_hint">Full Name</string>
+    <string name="sign_up_button_text">Sign Up</string>
+    <string name="already_have_account_login">Already have an account? Login</string>
+    <string name="left_decorative_image_desc">Left decorative image</string>
+    <string name="right_decorative_image_desc">Right decorative image</string>
+    <string name="profile_image_desc">User profile image</string>
+    <string name="notification_icon_desc">Notifications</string>
+    <string name="location_icon_desc">Location icon</string>
+    <string name="welcome_user">Welcome, Sarah!</string>
+    <string name="user_location">Brooklyn, NY</string>
+    <string name="navigate_safely_card_desc">Navigate Safely</string>
+    <string name="sos_emergency_card_desc">SOS Emergency</string>
+    <string name="report_safety_issue_card_desc">Report Safety Issue</string>
+    <string name="voice_trigger_setup_card_desc">Voice Trigger Setup</string>
+    <string name="community_safety_feed_card_desc">Community Safety Feed</string>
+    <string name="add_guardians_card_desc">Add Guardians</string>
+    <string name="safelyn_logo_description">Safelyn App Logo: A symbol of protection and connection.</string>
+    <string name="safety_line_text">Welcome to Safelyn. You are safe here.</string>
+
+</resources>

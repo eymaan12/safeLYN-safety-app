@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F5F8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_menu"
+                android:padding="4dp"
+                app:tint="#4A148C"
+                android:contentDescription="Back" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set SOS Keyword"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#AA40CA"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose a secret phrase (e.g., 'Blue Sky') that will trigger the alert silently."
+            android:textColor="#757575"
+            android:textSize="14sp"
+            android:layout_marginBottom="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Secret Phrase"
+            android:textStyle="bold"
+            android:textColor="#7C3480"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/secretPhrase"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="Type here..."
+            android:background="@drawable/bg_input_rounded"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:inputType="text"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Microphone Sensitivity"
+            android:textStyle="bold"
+            android:textColor="#7C3480"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"/>
+
+        <SeekBar
+            android:id="@+id/sensitivitySeekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="50"
+            android:progressTint="#BA68C8"
+            android:thumbTint="#AA40CA"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="32dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Save Keyword"
+                android:background="@drawable/btn_round_lilac"
+                app:backgroundTint="@null"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:elevation="4dp"/>
+
+            <Button
+                android:id="@+id/btnTest"
+                android:layout_width="200dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="16dp"
+                android:text="Test Current Keyword"
+                android:background="@android:color/transparent"
+                android:textColor="#AA40CA"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/listeningText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="28dp"
+            android:text="Current Keyword: Default (Help)"
+            android:textColor="#151416"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+</ScrollView>

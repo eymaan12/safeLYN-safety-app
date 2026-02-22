@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_standard">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_standard">
+
+                <ImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="@dimen/icon_profile"
+                    android:layout_height="@dimen/icon_profile"
+                    android:src="@drawable/ic_person"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/circle_mask"
+                    android:layout_alignParentStart="true"
+                    android:contentDescription="Profile"/>
+
+                <FrameLayout
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/notificationIcon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_notification"
+                        android:padding="8dp"/>
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="top|end"
+                        android:background="@drawable/red_dot"/>
+                </FrameLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hi, Loading..."
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_dark"/>
+
+            <TextView
+                android:id="@+id/txtLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:drawableStart="@drawable/ic_location_pin"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:text="Locating you..."
+                android:textColor="@color/text_light"
+                app:drawableTint="@color/text_light" />
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:columnCount="2"
+                app:rowCount="3"
+                app:useDefaultMargins="true"
+                app:alignmentMode="alignMargins">
+
+                <include android:id="@+id/cardSOS"
+                    layout="@layout/activity_item_feature_card_sos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"/>
+
+                <include android:id="@+id/cardNavigate"
+                    layout="@layout/activity_item_feature_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"/>
+
+                <include android:id="@+id/cardReport"
+                    layout="@layout/activity_item_feature_card_report"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"/>
+
+                <include android:id="@+id/cardVoice"
+                    layout="@layout/activity_item_feature_card_voice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"/>
+
+                <include android:id="@+id/cardGuardian"
+                    layout="@layout/activity_item_feature_card_guardian"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"/>
+
+                <include android:id="@+id/cardFeed"
+                    layout="@layout/activity_item_feature_card_feed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"/>
+
+            </androidx.gridlayout.widget.GridLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_light"
+        android:elevation="10dp"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@null"
+        app:itemTextColor="@color/text_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
